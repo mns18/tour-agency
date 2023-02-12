@@ -6,3 +6,200 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 1.85%;
+
+}
+
+.header{
+    height: 95vh;
+    background-image:linear-gradient(to right bottom, rgba(238 6 152 / 80%), rgba(12 0 255 / 80%) ), url(../img/head-background.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+    position: relative;
+
+
+}
+.header .logo-box{
+    position: absolute;
+    top: 2.3%;
+    left: 2.3%;
+}
+
+.header .logo-box .logo{
+    height: auto;
+    width: 5vw;
+    min-width: 40px;
+}
+
+.header .logo-box .sub-logo{
+    position: absolute;
+    color: rgb(94, 162, 225);
+    margin: 0;
+    padding: 0;
+    line-height: .5;
+    font-family: 'Kaushan Script', cursive;
+    display: inline;
+    font-size: 2.5vw;
+    top: calc(25px + 2.8vw);
+    left: calc(18px + 2.6vw);
+    font-size: calc(20px + 1vw);
+}
+
+
+.header .boxForHeading{
+    position: absolute;
+    top: 40vh;
+    left: 50vw;
+    backdrop-filter:blur(30px);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header .boxForHeading .primary-heading{
+
+     color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+.header .boxForHeading .primary-heading .primary-heading-top{
+    display: block;
+    font-size: calc(20px + 3.1vw);
+    font-weight: 400;
+    letter-spacing: 2vw;
+    animation-name: moveRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+        transform: translate(-100%);
+
+
+    }
+
+    80%{
+        transform: translate(10px);
+    }
+
+    100%{
+        opacity: 100%;
+        transform: translate(0);
+        
+    }
+}
+.header .boxForHeading .primary-heading .primary-heading-sub{
+    display: block;
+    font-size: calc(10px + 1.25vw);
+    letter-spacing: .75vw;
+    text-align: center;
+    animation-name: moveLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+}
+
+@keyframes moveLeft{
+    0%{
+        opacity: 0;
+        transform: translate(100%);
+
+    }
+
+    80%{
+        transform: translate(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.header .boxForHeading .top-button:link,
+.header .boxForHeading .top-button:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #fff;
+    padding: 1vw 2.5vw;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all .2s;
+    margin-top: 2.5vh;
+    position: relative;
+}
+
+.header .boxForHeading .top-button:hover{
+    transform: translateY(-3px);
+    box-shadow:0 .625vw 1.25vw rgba(2, 23, 252, 0.3) ;
+}
+
+.header .boxForHeading .top-button:active{
+    transform: translateY(1px);
+    box-shadow:0 .3125vw .75vw rgba(247, 0, 86, 0.3) ;
+    color: #777;
+}
+
+
+.header .boxForHeading .top-button::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   backface-visibility: hidden;
+    transition: all 1s;
+}
+
+.header .boxForHeading .heading-btn::after{
+    background-color: #fff;
+
+}
+
+.header .boxForHeading .top-button:hover:after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+.header .boxForHeading .top-btn-animation{
+    animation-name: btn-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: .75s;
+    animation-fill-mode: backwards;
+}
+@keyframes btn-animation{
+    0%{
+        opacity: 0;
+        transform: translateY(3vh);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
